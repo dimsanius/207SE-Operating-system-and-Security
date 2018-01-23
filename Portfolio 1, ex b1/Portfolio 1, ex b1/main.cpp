@@ -6,7 +6,6 @@ using namespace std;
 
 int main() 
 { 
-	cout << "Enter string to analyze: ";
 	//set up input string 
 	string input = "I recognise above"; 
 
@@ -28,7 +27,6 @@ int main()
 	{
 		counter++;
 		currentstring >> word[i];
-		cout << word[i] << endl;
 	}
 	
 
