@@ -7,7 +7,7 @@ using namespace std;
 int main() 
 { 
 	//set up input string 
-	string input = "I recognise above"; 
+	string input = "Nao recognise car"; 
 
 	//initalise input stream string
 	stringstream currentstring(input);
@@ -18,8 +18,8 @@ int main()
 	string PersonWords[] = { "Nao", "Shila" };
 	string BehaviourWords[] = {"recognise", "detect", "avoid", "replace"};
 	string PositionWords[] = { "above", "below", "left", "right" };
-	string PronounWords[] = { "I", "you", "they" };
-	string ObjectWords[] = { "car", "person", "dog", "diamond" };
+	string PronounWords[] = { "I", "you", "they", "We" };
+	string ObjectWords[] = { "car", "person", "dog", "diamond", "nut" };
 	string TextureWords[] = { "smooth", "dimpled", "rough" };
 	int counter = 0;
 	//Repeatedly put words in string array 
@@ -34,9 +34,9 @@ int main()
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords)/sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
+				if (word[1] == BehaviourWords[j])
 					for (int z = 0; z < sizeof(ObjectWords) / sizeof(string); z++)
-						if (word[2] == ObjectWords[i])
+						if (word[2] == ObjectWords[z])
 						{
 							cout << "Follows first rule." << endl;
 							system("PAUSE");
@@ -47,11 +47,11 @@ int main()
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 4)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
+				if (word[1] == BehaviourWords[j])
 					for (int z = 0; z < sizeof(TextureWords) / sizeof(string); z++)
-						if (word[2] == TextureWords[i])
+						if (word[2] == TextureWords[z])
 							for (int y = 0; y < sizeof(ObjectWords) / sizeof(string); y++)
-								if (word[3] == ObjectWords[i])
+								if (word[3] == ObjectWords[y])
 								{
 									cout << "Follows second rule." << endl;
 									system("PAUSE");
@@ -62,9 +62,9 @@ int main()
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
+				if (word[1] == BehaviourWords[j])
 					for (int z = 0; z < sizeof(PositionWords) / sizeof(string); z++)
-						if (word[2] == PositionWords[i])
+						if (word[2] == PositionWords[z])
 						{
 							cout << "Follows third rule." << endl;
 							system("PAUSE");
@@ -75,9 +75,9 @@ int main()
 	for (int i = 0; i < sizeof(PronounWords) / sizeof(string); i++)
 		if (word[0] == PronounWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
+				if (word[1] == BehaviourWords[j])
 					for (int z = 0; z < sizeof(ObjectWords) / sizeof(string); z++)
-						if (word[2] == ObjectWords[i])
+						if (word[2] == ObjectWords[z])
 						{
 							cout << "Follows fourth rule." << endl;
 							system("PAUSE");
@@ -88,9 +88,9 @@ int main()
 	for (int i = 0; i < sizeof(PronounWords) / sizeof(string); i++)
 		if (word[0] == PronounWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
+				if (word[1] == BehaviourWords[j])
 					for (int z = 0; z < sizeof(PositionWords) / sizeof(string); z++)
-						if (word[2] == PositionWords[i])
+						if (word[2] == PositionWords[z])
 						{
 							cout << "Follows fifth rule." << endl;
 							system("PAUSE");
