@@ -8,7 +8,7 @@ int main()
 { 
 	cout << "Enter string to analyze: ";
 	//set up input string 
-	string input = "bot pick ball"; 
+	string input = "Nao recognise car"; 
 
 	//initalise input stream string
 	stringstream currentstring(input);
@@ -23,15 +23,30 @@ int main()
 	string ObjectWords[] = { "car", "person", "dog", "diamond" };
 	string TextureWords[] = { "smooth", "dimpled", "rough" };
 	bool followsTheRule = true;
+	int counter = 0;
 	//Repeatedly put words in string array 
-	for (int i = 0; currentstring.good() && followsTheRule; i++)
+	for (int i = 0; currentstring.good(); i++)
 	{
+		counter++;
 		currentstring >> word[i];
 		cout << word[i] << endl;
 	}
-	cout << currentstring.seekp();
-	//if(word[0] == PersonWords[i])
-	//for(int i = 0; i < word->length; i++)
+	
+
+	for (int i = 0; i < sizeof(PersonWords); i++)
+		if (word[0] == PersonWords[i] && counter == 3)
+			for (int j = 0; j < sizeof(BehaviourWords); j++)
+				if (word[1] == BehaviourWords[i])
+					for (int z = 0; z < sizeof(ObjectWords); z++)
+						if (word[2] == ObjectWords[i])
+						{
+							cout << "Follows first rule." << endl;
+							system("PAUSE");
+							return 0;
+						}
+							
+
+
 	system("PAUSE");
 	return 0; 
 }
