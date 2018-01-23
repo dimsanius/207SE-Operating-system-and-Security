@@ -31,22 +31,8 @@ int main()
 		cout << word[i] << endl;
 	}
 	
-	//agent behaviour behaviour object
-	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
-		if (word[0] == PersonWords[i] && counter == 4)
-				for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
-				if (word[1] == BehaviourWords[i])
-									for (int z = 0; z < sizeof(BehaviourWords) / sizeof(string); z++)
-						if (word[2] == BehaviourWords[i])
-							for (int y = 0; y < sizeof(ObjectWords) / sizeof(string); y++)
-								if (word[3] == ObjectWords[i])
-								{
-									cout << "Follows first rule." << endl;
-									system("PAUSE");
-									return 0;
-								}
 
-	//agent behaviour object
+	//First rule: agent behaviour object
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords)/sizeof(string); j++)
@@ -54,12 +40,12 @@ int main()
 					for (int z = 0; z < sizeof(ObjectWords) / sizeof(string); z++)
 						if (word[2] == ObjectWords[i])
 						{
-							cout << "Follows second rule." << endl;
+							cout << "Follows first rule." << endl;
 							system("PAUSE");
 							return 0;
 						}
 						
-	//agent action texture object
+	//Second rule: agent action texture object
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 4)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
@@ -69,12 +55,12 @@ int main()
 							for (int y = 0; y < sizeof(ObjectWords) / sizeof(string); y++)
 								if (word[3] == ObjectWords[i])
 								{
-									cout << "Follows third rule." << endl;
+									cout << "Follows second rule." << endl;
 									system("PAUSE");
 									return 0;
 								}
 
-	//agent action position
+	//Third rule: agent action position
 	for (int i = 0; i < sizeof(PersonWords) / sizeof(string); i++)
 		if (word[0] == PersonWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
@@ -82,12 +68,12 @@ int main()
 					for (int z = 0; z < sizeof(PositionWords) / sizeof(string); z++)
 						if (word[2] == PositionWords[i])
 						{
-							cout << "Follows fourth rule." << endl;
+							cout << "Follows third rule." << endl;
 							system("PAUSE");
 							return 0;
 						}
 
-	//pronoun action object
+	//Fourth rule: pronoun action object
 	for (int i = 0; i < sizeof(PronounWords) / sizeof(string); i++)
 		if (word[0] == PronounWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
@@ -95,12 +81,12 @@ int main()
 					for (int z = 0; z < sizeof(ObjectWords) / sizeof(string); z++)
 						if (word[2] == ObjectWords[i])
 						{
-							cout << "Follows fifth rule." << endl;
+							cout << "Follows fourth rule." << endl;
 							system("PAUSE");
 							return 0;
 						}
 
-	//pronoun action position
+	//Fifth rule: pronoun action position
 	for (int i = 0; i < sizeof(PronounWords) / sizeof(string); i++)
 		if (word[0] == PronounWords[i] && counter == 3)
 			for (int j = 0; j < sizeof(BehaviourWords) / sizeof(string); j++)
@@ -108,7 +94,7 @@ int main()
 					for (int z = 0; z < sizeof(PositionWords) / sizeof(string); z++)
 						if (word[2] == PositionWords[i])
 						{
-							cout << "Follows sixth rule." << endl;
+							cout << "Follows fifth rule." << endl;
 							system("PAUSE");
 							return 0;
 						}
